@@ -1,0 +1,89 @@
+<div class="container">
+  <!-- <mat-form-field>
+    <input
+      matInput
+      placeholder="Search"
+      #input
+      (keyup)="searchMentor($event)"
+    />
+  </mat-form-field> -->
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Name"
+      #inputName
+      (keyup)="nameFilter($event)"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="User Type"
+      #inputUserType
+      (keyup)="userTypeFilter($event)"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Email"
+      #inputEmail
+      (keyup)="emailFilter($event)"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select (selectionChange)="statusFilter($event)">
+      <mat-option>None</mat-option>
+      <mat-option value="active">Active</mat-option>
+      <mat-option value="pending">Pending</mat-option>
+    </mat-select>
+    <mat-label>Status</mat-label>
+  </mat-form-field>
+
+  <mat-table class="mentor-table mat-elevation-z8" [dataSource]="dataSource">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let mentor">
+        {{ mentor.civility }}. {{ mentor.last_name }} {{ mentor.first_name }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="user_type">
+      <mat-header-cell *matHeaderCellDef>User Type</mat-header-cell>
+      <mat-cell *matCellDef="let mentor">
+        {{ mentor.company.user_type }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+      <mat-cell *matCellDef="let mentor">
+        {{ mentor.email }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="user_status">
+      <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+      <mat-cell *matCellDef="let mentor">
+        <mat-icon *ngIf="mentor.user_status == 'active'" class="active">
+          check_circle
+        </mat-icon>
+        <mat-icon *ngIf="mentor.user_status == 'pending'" class="pending">
+          remove_circle
+        </mat-icon>
+      </mat-cell>
+    </ng-container>
+
+    <div *matNoDataRow class="noDataRow">
+      <p>
+        No data matching the filter "<span
+          >{{ inputName.value }} {{ inputUserType.value }}
+          {{ inputEmail.value }}</span
+        >"
+      </p>
+    </div>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>
