@@ -1,0 +1,31 @@
+/* .card {
+  margin-top: 1rem;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgb(189, 177, 177);
+}
+img {
+  margin-right: 1rem;
+  width: 100px;
+  height: 100%;
+} */
+
+.card-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 2rem;
+}
+.card {
+  max-width: 400px;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}

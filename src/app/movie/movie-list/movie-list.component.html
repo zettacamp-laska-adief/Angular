@@ -1,0 +1,8 @@
+<h1>List Movies</h1>
+<div class="card-container">
+  <app-movie-item
+    *ngFor="let movie of movies"
+    [movieData]="movie"
+    routerLink="{{ movie.idMovie }}"
+  ></app-movie-item>
+</div>

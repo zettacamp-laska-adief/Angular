@@ -1,0 +1,16 @@
+.card {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.info {
+  padding-left: 2rem;
+  width: 800px;
+}
+.info .title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+img {
+  width: 300px;
+}

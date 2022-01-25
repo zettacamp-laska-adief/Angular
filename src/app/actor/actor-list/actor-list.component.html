@@ -1,0 +1,12 @@
+<h1>List Actors</h1>
+<div class="card-container">
+  <mat-card class="card" *ngFor="let actor of actors">
+    <mat-card-title-group>
+      <mat-card-title>
+        <h3>{{ actor.name }}</h3>
+      </mat-card-title>
+
+      <img mat-card-lg-image [src]="actor.imgActor" [alt]="actor.name" />
+    </mat-card-title-group>
+  </mat-card>
+</div>

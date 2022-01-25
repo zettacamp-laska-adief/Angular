@@ -1,0 +1,8 @@
+<mat-tab-group>
+  <mat-tab label="Movie Detail">
+    <app-info-movie [movieInfo]="movie"></app-info-movie>
+  </mat-tab>
+  <mat-tab label="Actors">
+    <app-info-actor [actorInfo]="movie.actor"></app-info-actor>
+  </mat-tab>
+</mat-tab-group>
