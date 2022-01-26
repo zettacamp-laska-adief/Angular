@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "laska",
+      "last_name": "adief",
+      "birth": "2000-07-13",
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "first_name": "michael",
+      "last_name": "phelp",
+      "birth": "1972-06-26",
+      "gender": "male",
+      "civility": "mr"
+    },
+    {
+      "id": 0.3618823881288433,
+      "civility": "mrs",
+      "first_name": "Zeynep",
+      "last_name": "Dilan",
+      "gender": "female",
+      "birth": "2000-06-29T17:00:00.000Z"
+    },
+    {
+      "id": 0.5786603598483722,
+      "civility": "mr",
+      "first_name": "michael",
+      "last_name": "luci",
+      "gender": "male",
+      "birth": "2017-06-15T17:00:00.000Z"
+    }
+  ]
+}

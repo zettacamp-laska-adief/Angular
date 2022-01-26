@@ -1,0 +1,44 @@
+<!-- <h2>{{ first_name }}</h2> -->
+
+<mat-dialog-content [formGroup]="form">
+  <mat-radio-group formControlName="civility">
+    <mat-radio-button value="mr" style="margin-right: 1rem">
+      Mr
+    </mat-radio-button>
+    <mat-radio-button value="mrs">Mrs</mat-radio-button>
+  </mat-radio-group>
+
+  <br />
+
+  <mat-form-field>
+    <input matInput formControlName="first_name" placeholder="First Name" />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field>
+    <input matInput formControlName="last_name" placeholder="Last Name" />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="date" formControlName="birth" />
+    <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+    <mat-datepicker #date></mat-datepicker>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field>
+    <mat-select placeholder="Gender" formControlName="gender">
+      <mat-option value="male">Male</mat-option>
+      <mat-option value="female">Female</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+  <button mat-raised-button color="warn" (click)="close()">Close</button>
+</mat-dialog-actions>
